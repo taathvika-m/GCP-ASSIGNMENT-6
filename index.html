@@ -8,55 +8,62 @@
   <!-- Dialogflow Messenger Script -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
-  <!-- Custom Styles -->
+  <!-- Internal Styling -->
   <style>
-    df-messenger {
-      /* Positioning */
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-
-      /* Chat Window */
-      --df-messenger-chat-window-width: 400px;
-      --df-messenger-chat-window-height: 600px;
-      --df-messenger-chat-border-radius: 12px;
-      --df-messenger-chat-background-color: #f9f9f9;
-
-      /* Title Bar */
-      --df-messenger-button-titlebar-color: #2b557b;
-      --df-messenger-button-titlebar-font-color: #ffffff;
-      --df-messenger-titlebar-title-font-size: 18px;
-      --df-messenger-titlebar-title-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-      /* Messages */
-      --df-messenger-user-message: #2b557b;
-      --df-messenger-bot-message: #e0e0e0;
-      --df-messenger-font-color: #000000;
-
-      /* Input Area */
-      --df-messenger-input-box-color: #ffffff;
-      --df-messenger-input-font-color: #000000;
-      --df-messenger-send-icon: #2b557b;
+    /* Page Background & Font */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Responsive Design */
-    @media (max-width: 600px) {
+    /* Optional heading or content */
+    .content {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #f1f1f1;
+      --df-messenger-button-titlebar-color: #00796b;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000000;
+      --df-messenger-user-message: #00796b;
+      --df-messenger-user-font-color: #ffffff;
+      --df-messenger-chat-window-height: 500px;
+      --df-messenger-chat-window-width: 360px;
+      --df-messenger-chat-border-radius: 12px;
+    }
+
+    @media screen and (max-width: 600px) {
       df-messenger {
         --df-messenger-chat-window-width: 100%;
         --df-messenger-chat-window-height: 100%;
-        --df-messenger-chat-border-radius: 0;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Dialogflow Messenger Widget -->
+  <!-- Optional intro content -->
+  <div class="content">
+    <h1>Welcome to the University Inquiry Chatbot</h1>
+    <p>Ask about course details, housing, tuition, and more.</p>
+  </div>
+
+  <!-- Dialogflow Chatbot -->
   <df-messenger
     intent="WELCOME"
     chat-title="chatbotinquire"
     agent-id="2c1b47c7-b4cf-4bb8-bf74-f73f79ba6032"
-    language-code="en">
-  </df-messenger>
+    language-code="en"
+  ></df-messenger>
 </body>
 </html>
