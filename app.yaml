@@ -1,0 +1,7 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+instance_class: F1&#8203;:contentReference[oaicite:2]{index=2}
+
+:contentReference[oaicite:3]{index=3}
+  - :contentReference[oaicite:4]{index=4}
+    :contentReference[oaicite:5]{index=5}

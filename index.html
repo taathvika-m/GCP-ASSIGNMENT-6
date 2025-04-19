@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Inquiry Chatbot</title>
+  <!-- Dialogflow Messenger Script -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <!-- Custom Styles -->
+  <style>
+    df-messenger {
+      /* Positioning */
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+
+      /* Chat Window */
+      --df-messenger-chat-window-width: 400px;
+      --df-messenger-chat-window-height: 600px;
+      --df-messenger-chat-border-radius: 12px;
+      --df-messenger-chat-background: #f9f9f9;
+
+      /* Title Bar */
+      --df-messenger-titlebar-background: #2b557b;
+      --df-messenger-titlebar-font-color: #ffffff;
+      --df-messenger-titlebar-title-font-size: 18px;
+      --df-messenger-titlebar-title-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      /* Messages */
+      --df-messenger-message-user-background: #2b557b;
+      --df-messenger-message-user-font-color: #ffffff;
+      --df-messenger-message-bot-background: #e0e0e0;
+      --df-messenger-message-bot-font-color: #000000;
+
+      /* Input Area */
+      --df-messenger-input-box-background: #ffffff;
+      --df-messenger-input-font-color: #000000;
+      --df-messenger-send-icon-color: #2b557b;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      df-messenger {
+        --df-messenger-chat-window-width: 100%;
+        --df-messenger-chat-window-height: 100%;
+        --df-messenger-chat-border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Dialogflow Messenger Widget -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="chatbotinquire"
+    agent-id="2c1b47c7-b4cf-4bb8-bf74-f73f79ba6032"
+    language-code="en"
+  ></df-messenger>
+</body>
+</html>&#8203;:contentReference[oaicite:10]{index=10}
